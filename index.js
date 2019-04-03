@@ -10,8 +10,18 @@ app.get('/plants', (req, res) => {
     fetch("https://trefle.io/api/plants?token=VEdRY0JHVDdvaFZZS0o0UW1HVyswZz09&q=" + req.query.plant)
     .then(r=>r.json())
     .then(data=>{  
-        // console.log(data);
+        console.log(data);
         res.json(data)
+        
+    })
+})
+app.get('/images', (req, res) => {
+    // console.log(req.query.link.images)
+    fetch(req.query.link + "?token=VEdRY0JHVDdvaFZZS0o0UW1HVyswZz09")
+    .then(r=>r.json())
+    .then(data=>{  
+        console.log(data.images[1]);
+        res.json(data.images)
         
     })
 })
