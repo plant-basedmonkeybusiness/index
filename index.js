@@ -41,3 +41,6 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 //Express er library i node.js sem meðal annars gerir það auðveldara að gera server,
 // og routing og allskonar cool dóti
+
+// 
+// Æsa 
